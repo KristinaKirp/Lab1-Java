@@ -26,6 +26,7 @@ public class Main
         System.out.println(Test);
 
         System.out.println("Задание 1.7");
+        System.out.println("Проверка входимости в диапазон");
         System.out.println("Введите число  края диапозона: ");
         int a = scaner.nextInt();
         System.out.println("Введите число второго края диапозона: ");
@@ -47,20 +48,21 @@ public class Main
         System.out.println(range);
 
         System.out.println("Задание 2.1");
+        System.out.println("Возвращение модуля");
         System.out.println("Введите число");
         int x1 = scaner.nextInt();
         int ab = ex1.abs(x1);
         System.out.println("Модуль введеного числа: " + ab);
 
         System.out.println("Задание 2.3");
-        System.out.println("Проверка на делимость");
+        System.out.println("Проверка на делимость на 3 и 5");
         System.out.println("Введите число: ");
         int number = scaner.nextInt();
         boolean is35 = ex1.is35(number);
         System.out.println(is35);
 
         System.out.println("Задание 2.5");
-        System.out.println("Проверка максимального чсила");
+        System.out.println("Нахождение максимального чсила");
         System.out.println("Введите первое число: ");
         int number1 = scaner.nextInt();
         System.out.println("Введите второе число: ");
@@ -116,14 +118,15 @@ public class Main
         System.out.println();
 
         System.out.println("Задание 4.1");
+        System.out.println("Возвращает первое вхождение числа в массив ");
         System.out.println("Введите размер массива: ");
         int size = scaner.nextInt();
         int[] arr = new int[size];
         System.out.println("Введите числа в массив: ");
         for(int i = 0; i < size; i++){
             System.out.print("№" + (i+1) + " ");
-            int x0 = scaner.nextInt();
-            arr[i] = x0;
+            int x41 = scaner.nextInt();
+            arr[i] = x41;
         }
         System.out.println("Введите число индекс которого нужно вывести: ");
         int findNum = scaner.nextInt();
@@ -131,19 +134,21 @@ public class Main
         System.out.println("Индекс вашего числа: " + findFirst);
 
         System.out.println("Задание 4.3");
+        System.out.println("Вывод масимального по модуля числа в массиве");
         System.out.println("Введите размер массива: ");
         int size1 = scaner.nextInt();
         int[] arrAbs = new int[size1];
         System.out.println("Введите числа в массив: ");
         for(int i = 0; i < size1; i++) {
             System.out.print("№" + (i+1) + " ");
-            int x41 = scaner.nextInt();
-            arrAbs[i] = x41;
+            int x43 = scaner.nextInt();
+            arrAbs[i] = x43;
         }
         int maxNum = ex1.maxAbs(arrAbs);
         System.out.println("Наибольшее значение по модулю в массиве: " + maxNum);
 
         System.out.println("Задание 4.5");
+        System.out.println("Возвращение нового массива состоящего из 2 ваших ");
         System.out.println("Введите размер первого массива: ");
         int sizeArr1 = scaner.nextInt();
         int[] arr1 = new int[sizeArr1];
@@ -168,7 +173,9 @@ public class Main
         for(int i = 0; i < newArr.length; i ++){
             System.out.print(newArr[i] + " ");
         }
+        System.out.println();
         System.out.println("Задание 4.7");
+        System.out.println("Возврат массив в обратном порядке");
         System.out.println("Введите размер массива: ");
         int sizeOrig = scaner.nextInt();
         int[] arrOrig = new int[sizeOrig];
@@ -182,7 +189,9 @@ public class Main
         for(int i = 0; i < arrOrig.length; i++){
             System.out.print(reversArr[i] + " ");
         }
+        System.out.println();
         System.out.println("Задание 4.9");
+        System.out.println("Возвращение массива, содержащего индексы найденных чисел");
         System.out.println("Введите размер массива: ");
         int sizeArr = scaner.nextInt();
         int[] arrFind = new int[sizeArr];
