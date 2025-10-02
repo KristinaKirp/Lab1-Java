@@ -45,7 +45,7 @@ public class Main
         System.out.println("Введите третье число: ");
         int c1 = scaner.nextInt();;
         boolean equal = ex1.isEqual(a1,b1,c1);
-        System.out.println(range);
+        System.out.println(equal);
 
         System.out.println("Задание 2.1");
         System.out.println("Возвращение модуля");
