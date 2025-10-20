@@ -8,7 +8,7 @@ public class Main
         System.out.println("Введите дробное число: ");
         Scanner scaner = new Scanner(System.in);
         double x = scaner.nextDouble();
-        test ex1 = new test();
+        Test ex1 = new Test();
         double fraction1 = ex1.fraction(x);
         System.out.println("Дробная часть: " + fraction1);
 
@@ -16,7 +16,11 @@ public class Main
         System.out.println("Введите символ от 0 до 9: ");
         char c = scaner.next().charAt(0);
         int toChar = ex1.charToNum(c);
-        System.out.println("Символ преобразованный в число: "+ toChar);
+        if (toChar == -1) {
+            System.out.println("Введено неверное значение");
+        } else {
+            System.out.println("Символ преобразованный в число: "+ toChar);
+        }
 
         System.out.println("Задание 1.5");
         System.out.println("Проверк на двухзначность");
@@ -120,7 +124,15 @@ public class Main
         System.out.println("Задание 4.1");
         System.out.println("Возвращает первое вхождение числа в массив ");
         System.out.println("Введите размер массива: ");
-        int size = scaner.nextInt();
+        int size;
+        while (true) {
+            size = scaner.nextInt();
+            if(size > 0) {
+                break;
+            } else {
+                System.out.println("Размер массива должен быть положительным числом");
+            }
+        }
         int[] arr = new int[size];
         System.out.println("Введите числа в массив: ");
         for(int i = 0; i < size; i++){
@@ -129,14 +141,30 @@ public class Main
             arr[i] = x41;
         }
         System.out.println("Введите число индекс которого нужно вывести: ");
-        int findNum = scaner.nextInt();
+        int findNum;
+        while (true) {
+            findNum = scaner.nextInt();
+            if(findNum > -1) {
+                break;
+            } else {
+                System.out.println("Индекс не должен быть отрицательным числом");
+            }
+        }
         int findFirst = ex1.findFirst(arr, findNum);
         System.out.println("Индекс вашего числа: " + findFirst);
 
         System.out.println("Задание 4.3");
         System.out.println("Вывод масимального по модуля числа в массиве");
         System.out.println("Введите размер массива: ");
-        int size1 = scaner.nextInt();
+        int size1;
+        while (true) {
+            size1 = scaner.nextInt();
+            if(size1 > 0) {
+                break;
+            } else {
+                System.out.println("Размер массива должен быть положительным числом");
+            }
+        }
         int[] arrAbs = new int[size1];
         System.out.println("Введите числа в массив: ");
         for(int i = 0; i < size1; i++) {
@@ -150,7 +178,15 @@ public class Main
         System.out.println("Задание 4.5");
         System.out.println("Возвращение нового массива состоящего из 2 ваших ");
         System.out.println("Введите размер первого массива: ");
-        int sizeArr1 = scaner.nextInt();
+        int sizeArr1;
+        while (true) {
+            sizeArr1 = scaner.nextInt();
+            if(sizeArr1 > 0) {
+                break;
+            } else {
+                System.out.println("Размер массива должен быть положительным числом");
+            }
+        }
         int[] arr1 = new int[sizeArr1];
         System.out.println("Введите числа в массив: ");
         for(int i = 0; i < sizeArr1; i++) {
@@ -159,7 +195,15 @@ public class Main
             arr1[i] = a45;
         }
         System.out.println("Введите размер второго массива: ");
-        int sizeArr2 = scaner.nextInt();
+        int sizeArr2;
+        while (true) {
+            sizeArr2 = scaner.nextInt();
+            if(sizeArr2 > 0) {
+                break;
+            } else {
+                System.out.println("Размер массива должен быть положительным числом");
+            }
+        }
         int[] arr2 = new int[sizeArr2];
         System.out.println("Введите числа в массив: ");
         for(int i = 0; i < sizeArr2; i++) {
@@ -168,7 +212,15 @@ public class Main
             arr2[i] = b45;
         }
         System.out.println("Введите число, после какой позиции вставлять значение второго массива в первый");
-        int pos = scaner.nextInt();
+        int pos;
+        while (true) {
+            pos = scaner.nextInt();
+            if ( pos >= 0 && pos <= sizeArr1) {
+                break;
+            } else {
+                System.out.println("Неверное введено значене");
+            }
+        }
         int[] newArr = ex1.add(arr1,arr2,pos);
         for(int i = 0; i < newArr.length; i ++){
             System.out.print(newArr[i] + " ");
@@ -177,7 +229,15 @@ public class Main
         System.out.println("Задание 4.7");
         System.out.println("Возврат массив в обратном порядке");
         System.out.println("Введите размер массива: ");
-        int sizeOrig = scaner.nextInt();
+        int sizeOrig;
+        while (true) {
+            sizeOrig = scaner.nextInt();
+            if(sizeOrig > 0) {
+                break;
+            } else {
+                System.out.println("Размер массива должен быть положительным числом");
+            }
+        }
         int[] arrOrig = new int[sizeOrig];
         System.out.println("Введите числа в массив: ");
         for(int i = 0; i < sizeOrig; i++) {
@@ -193,7 +253,15 @@ public class Main
         System.out.println("Задание 4.9");
         System.out.println("Возвращение массива, содержащего индексы найденных чисел");
         System.out.println("Введите размер массива: ");
-        int sizeArr = scaner.nextInt();
+        int sizeArr;
+        while (true) {
+            sizeArr = scaner.nextInt();
+            if(sizeArr > 0) {
+                break;
+            } else {
+                System.out.println("Размер массива должен быть положительным числом");
+            }
+        }
         int[] arrFind = new int[sizeArr];
         System.out.println("Введите числа в массив: ");
         for(int i = 0; i < sizeArr; i++) {
